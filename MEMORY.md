@@ -98,12 +98,13 @@
     - Updated to the official user-provided logo with orange squircle butterfly-K icon and Khuraki wordmark on transparent background.
   - **Strict Line Constraints:** Maintained `site-header.tsx` < 180 lines, `animated-cta-button.tsx` < 90 lines, and `globals.css` < 25 added lines.
 
-- **2026-10-09 (Update 10 - Enlarged Minimalist Floating Dock & Right-Aligned Menu):**
-  - **Enlarged Floating Island (`site-header.tsx` - 88 lines):**
-    - Increased container padding and width (`px-6 py-3 sm:py-3.5 max-w-5xl`) and logo size (`h-8 sm:h-9 w-auto`).
-    - Purged search trigger, search modal, and header CTA button to establish an ultra-clean, clutter-free aesthetic.
-    - Moved navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`) to the right margin with `text-sm font-medium` typography and `gap-7 lg:gap-8`.
-    - Mobile: Maintained clean hamburger drawer toggle on the right side.
-  - **Layout Spacing Sync:** Adjusted top padding on hero (`app/page.tsx`, `pt-24 lg:pt-28`) and legal shell (`legal-page-shell.tsx`, `pt-28`) to maintain perfect visual hierarchy below the enlarged dock.
-
+- **2026-10-09 (Update 10 - Streamlined Floating Header: Search & CTA Removed):**
+  - **Minimal Floating Dock (`site-header.tsx` - 85 lines):**
+    - Cleaned up the floating navigation dock down to essential core elements:
+      - Left: Official Khuraki wordmark logo (`/khuraki-logo.png`).
+      - Desktop Nav: Clean text links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`).
+      - Mobile: Hamburger toggle button opening responsive navigation drawer.
+    - Completely purged `CommandSearch` trigger pill, search modal, `Ctrl+K` key listeners, and `AnimatedCtaButton` ("Get Khuraki" / "Get app").
+    - Deleted unused files `components/ui/command-search.tsx` and `components/ui/animated-cta-button.tsx`.
+    - Production static export builds in < 900ms with 0 type errors.
 

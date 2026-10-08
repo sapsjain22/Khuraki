@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className="ambient-hero-glow" aria-hidden="true" />
 
       {/* Hero Section */}
-      <section className="relative mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 lg:px-8 lg:pt-28 lg:pb-24">
+      <section className="relative mx-auto max-w-6xl px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-20 lg:pb-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column: Editorial Headline & Value Prop */}
           <div className="max-w-xl lg:col-span-7">

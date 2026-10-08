@@ -59,17 +59,15 @@
 ### 2.3 Component Suites (`components/`)
 
 #### Layout Components (`components/layout/`)
-- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Enlarged floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-5xl rounded-full bg-white/85 backdrop-blur-md border border-zinc-200/80 px-6 py-3.5 shadow-sm`). Minimalist two-zone architecture housing a larger Khuraki brand wordmark (`h-8 sm:h-9`) on the left and right-aligned navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`) plus responsive mobile drawer.
+- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Centered floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-3xl rounded-full bg-white/85 backdrop-blur-md border border-zinc-200/80 shadow-sm`). Houses the official Khuraki wordmark (`/khuraki-logo.png`), desktop navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`), and responsive mobile drawer.
 - [`SiteFooter.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-footer.tsx): Clean light footer on `bg-zinc-50/80 border-t border-zinc-200` with official Khuraki wordmark, legal navigation links, copyright, and informational medical disclaimer.
 - [`LegalPageShell.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/legal-page-shell.tsx): Shared wrapper for legal documents with back navigation button, metadata timestamps, and high-contrast typography.
 - [`AnnouncementBanner.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/announcement-banner.tsx): Top announcement ribbon component (available on demand).
 
 #### Interactive UI Components (`components/ui/`)
-- [`AnimatedCtaButton.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/animated-cta-button.tsx): High-contrast black pill CTA button (`bg-zinc-950 text-white rounded-full px-4 py-1.5`) featuring `@keyframes header-shimmer` border sweep, live emerald status pulse, Lucide `Download` icon, and smooth micro-interactions.
 - [`InteractiveDemo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/interactive-demo.tsx): 10-second calorie demonstrator card. Features a single slider (1,400 to 3,200 kcal), dynamic concentric calorie ring, and real-time deterministic macro chips.
 - [`MacroRing.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/macro-ring.tsx): Concentric SVG arc calculating progress percentage and stroke dashoffset dynamically.
 - [`GooglePlayBadge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/google-play-badge.tsx): Reusable Google Play badge component with official multi-color vector mark.
-- [`CommandSearch.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/command-search.tsx): Accessible modal search palette listening for `Ctrl+K` with fuzzy destination filtering.
 
 
 #### Bento Grid Components (`components/bento/`)
