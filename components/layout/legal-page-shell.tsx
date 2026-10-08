@@ -14,7 +14,7 @@ export function LegalPageShell({
   children,
 }: LegalPageShellProps) {
   return (
-    <main className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <main className="mx-auto max-w-4xl px-4 pt-28 pb-16 sm:px-6 lg:px-8">
       {/* Back button */}
       <div className="mb-8">
         <Link

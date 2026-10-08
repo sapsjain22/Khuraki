@@ -59,7 +59,7 @@
 ### 2.3 Component Suites (`components/`)
 
 #### Layout Components (`components/layout/`)
-- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Centered floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-4xl rounded-full bg-white/85 backdrop-blur-md border border-zinc-200/80 shadow-sm`). 3-Zone Flex architecture housing the official Khuraki wordmark (`/khuraki-logo.png`), desktop navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`), `CommandSearch` (`⌘K`) trigger pill, `AnimatedCtaButton`, and responsive mobile drawer.
+- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Enlarged floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-5xl rounded-full bg-white/85 backdrop-blur-md border border-zinc-200/80 px-6 py-3.5 shadow-sm`). Minimalist two-zone architecture housing a larger Khuraki brand wordmark (`h-8 sm:h-9`) on the left and right-aligned navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`) plus responsive mobile drawer.
 - [`SiteFooter.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-footer.tsx): Clean light footer on `bg-zinc-50/80 border-t border-zinc-200` with official Khuraki wordmark, legal navigation links, copyright, and informational medical disclaimer.
 - [`LegalPageShell.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/legal-page-shell.tsx): Shared wrapper for legal documents with back navigation button, metadata timestamps, and high-contrast typography.
 - [`AnnouncementBanner.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/announcement-banner.tsx): Top announcement ribbon component (available on demand).
