@@ -1,6 +1,7 @@
 import React from "react";
 import { GooglePlayBadge } from "@/components/ui/google-play-badge";
 import { InteractiveDemo } from "@/components/ui/interactive-demo";
+import PhoneMockupBasic from "@/components/ui/phone-mockups-1";
 import { BentoGrid } from "@/components/bento/bento-grid";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -68,6 +69,25 @@ export default function HomePage() {
             <InteractiveDemo />
           </div>
         </div>
+      </section>
+
+      {/* App Showcase Section: Interactive Phone Mockup Carousel */}
+      <section className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 border-t border-zinc-100">
+        <div className="mx-auto max-w-2xl text-center mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 mb-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="text-xs font-semibold tracking-wide text-zinc-700">
+              Interactive Preview
+            </span>
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
+            Designed for clarity. Built for focus.
+          </h2>
+          <p className="mt-3 text-sm text-zinc-600 sm:text-base leading-relaxed">
+            Glanceable macro rings, frictionless photo logging, and real-time offline synchronization.
+          </p>
+        </div>
+        <PhoneMockupBasic />
       </section>
 
       {/* Bento Grid: 5 Core Architectural Invariants */}

@@ -65,6 +65,9 @@
 - [`AnnouncementBanner.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/announcement-banner.tsx): Top announcement ribbon component (available on demand).
 
 #### Interactive UI Components (`components/ui/`)
+- [`button.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/button.tsx): Radix Slot + CVA button primitive with full shadcn variants.
+- [`phone-mockups-1.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1.tsx): Auto-rotating iPhone 15 Pro mockup carousel (`PhoneMockupBasic`) displaying interactive app preview screens.
+- [`phone-mockups-1-utils/phone-carousel.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1-utils/phone-carousel.tsx): iPhone 15 Pro SVG frame mockup with carousel controls, autoplay, and pause states.
 - [`InteractiveDemo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/interactive-demo.tsx): 10-second calorie demonstrator card. Features a single slider (1,400 to 3,200 kcal), dynamic concentric calorie ring, and real-time deterministic macro chips.
 - [`MacroRing.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/macro-ring.tsx): Concentric SVG arc calculating progress percentage and stroke dashoffset dynamically.
 - [`GooglePlayBadge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/google-play-badge.tsx): Reusable Google Play badge component with official multi-color vector mark.

@@ -105,6 +105,19 @@
       - Desktop Nav: Clean text links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`).
       - Mobile: Hamburger toggle button opening responsive navigation drawer.
     - Completely purged `CommandSearch` trigger pill, search modal, `Ctrl+K` key listeners, and `AnimatedCtaButton` ("Get Khuraki" / "Get app").
-    - Deleted unused files `components/ui/command-search.tsx` and `components/ui/animated-cta-button.tsx`.
     - Production static export builds in < 900ms with 0 type errors.
+
+- **2026-10-09 (Update 11 - Phone Mockup Carousel & shadcn Button Integration):**
+  - **Dependencies Installed:** Added `@radix-ui/react-slot`, `class-variance-authority`, `clsx`, `tailwind-merge`.
+  - **Utility Helper (`lib/utils.ts`):** Standard `cn` utility function combining `clsx` and `twMerge`.
+  - **UI Primitives:**
+    - `components/ui/button.tsx`: Full shadcn Button with CVA variants and Slot support.
+    - `components/ui/phone-mockups-1-utils/use-mobile.ts`: Responsive mobile breakpoint detector.
+    - `components/ui/phone-mockups-1-utils/phone-carousel.tsx`: iPhone 15 Pro SVG frame mockup with carousel controls, autoplay, and pause states.
+    - `components/ui/phone-mockups-1.tsx`: `PhoneMockupBasic` component configured with placeholder app screens.
+    - `components/ui/phone-mockup-demo.tsx`: Standalone preview wrapper.
+  - **Homepage Integration (`app/page.tsx`):**
+    - Mounted the interactive Phone Mockup carousel inside a dedicated "Interactive Preview" section between the Hero and Bento Grid.
+  - **Build Verification:** Production static export compiled cleanly in 882ms with zero errors.
+
 
