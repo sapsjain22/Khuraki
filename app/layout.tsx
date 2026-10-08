@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { AnnouncementBanner } from "@/components/layout/announcement-banner";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import "./globals.css";
@@ -74,9 +73,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-zinc-950 antialiased selection:bg-amber-100 selection:text-amber-900">
-        <AnnouncementBanner />
         <SiteHeader />
-        <div className="relative min-h-[calc(100vh-6.5rem)]">
+        <div className="relative min-h-[calc(100vh-4rem)]">
           {children}
         </div>
         <SiteFooter />
