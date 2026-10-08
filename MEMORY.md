@@ -120,4 +120,21 @@
     - Mounted the interactive Phone Mockup carousel inside a dedicated "Interactive Preview" section between the Hero and Bento Grid.
   - **Build Verification:** Production static export compiled cleanly in 882ms with zero errors.
 
+- **2026-10-09 (Update 12 - Centered Editorial Hero, Dual Ambient Mesh & Multi-Device Phone Stage):**
+  - **Editorial Canvas (`app/page.tsx` - 127 lines):**
+    - Enclosed rounded card hero container (`rounded-[36px] border border-zinc-200/70 bg-white`).
+    - Ambient dual-tone radial gradient mesh (soft violet left, soft amber right in `globals.css`).
+    - Centered typography lockup: capsule badge ("Deterministic Nutrition Engine"), 2-line display headline ("Manage Your Health Anytime, Anywhere."), and side-by-side store CTA pills.
+  - **Multi-Device Phone Stage (`components/hero/hero-phone-stage.tsx` - 90 lines):**
+    - 3-device staggered smartphone showcase.
+    - Dominant center device runs the interactive auto-rotating `PhoneCarousel`.
+    - Left/right devices angled in 3D perspective with realistic bezels, hidden on mobile for clean responsiveness.
+  - **Floating Glass Badges (`components/hero/floating-badge.tsx` - 58 lines):**
+    - Left: `AvatarReviewBadge` (User avatars + 4.9/5 stars + "4k+ Active Users With Top Reviews").
+    - Right: `FeatureChipsBadge` (Violet "100% Offline First" + Emerald "Zero Photo Storage").
+  - **SiteHeader Refinement (`components/layout/site-header.tsx` - 117 lines):**
+    - 3-zone layout with active dot indicator on primary nav link and dark "Download App" pill with trailing circle arrow.
+  - **Strict Line Limit Compliance:** All 5 target files strictly within configured limits.
+
+
 

@@ -73,6 +73,10 @@
 - [`GooglePlayBadge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/google-play-badge.tsx): Reusable Google Play badge component with official multi-color vector mark.
 
 
+#### Hero & Showcase Components (`components/hero/`)
+- [`hero-phone-stage.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/hero/hero-phone-stage.tsx): 3-device smartphone showcase stage with center interactive rotating `PhoneCarousel`, angled flanking preview devices, and floating badge overlays.
+- [`floating-badge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/hero/floating-badge.tsx): Glassmorphic stat and feature overlay badges (`AvatarReviewBadge` & `FeatureChipsBadge`).
+
 #### Bento Grid Components (`components/bento/`)
 - [`BentoGrid.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/bento/bento-grid.tsx): 3-column responsive grid showcasing 5 core architectural pillars (Snap & Log, Deterministic Math, Offline-First, Adaptive Calibration, Privacy by Design).
 - [`BentoCard.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/bento/bento-card.tsx): Clean white bento card with subtle zinc borders, pill badges, and icon badges.

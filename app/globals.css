@@ -98,3 +98,18 @@ input[type="range"].khuraki-slider::-moz-range-thumb {
   animation: header-shimmer 4s ease infinite;
 }
 
+/* Ambient Dual-Tone Gradient Mesh for Hero */
+.ambient-glow-left {
+  background: radial-gradient(circle, rgba(224, 231, 255, 0.75) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+}
+
+.ambient-glow-right {
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.75) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+}
+
+.phone-device-shadow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
