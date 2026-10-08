@@ -14,9 +14,6 @@ interface MacroRingProps {
 export function MacroRing({
   calories,
   maxCalories,
-  proteinGrams,
-  carbsGrams,
-  fatGrams,
   size = 200,
 }: MacroRingProps) {
   const strokeWidth = 12;
@@ -33,7 +30,7 @@ export function MacroRing({
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="#1F1F24"
+          stroke="#e4e4e7"
           strokeWidth={strokeWidth}
           fill="none"
         />
@@ -42,7 +39,7 @@ export function MacroRing({
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="#F59E0B"
+          stroke="#d97706"
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
@@ -54,10 +51,10 @@ export function MacroRing({
 
       {/* Center Label (Calories) */}
       <div className="absolute flex flex-col items-center justify-center text-center">
-        <span className="text-3xl font-extrabold tracking-tight text-[#F5F5F5]">
+        <span className="text-3xl font-extrabold tracking-tight text-zinc-950">
           {calories}
         </span>
-        <span className="text-[11px] font-medium uppercase tracking-wider text-[#A1A1AA]">
+        <span className="text-[11px] font-medium uppercase tracking-wider text-zinc-500">
           kcal target
         </span>
       </div>

@@ -17,8 +17,8 @@ export function GooglePlayBadge({ className = "", size = "md" }: GooglePlayBadge
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Get Khuraki on Google Play"
-      className={`inline-flex items-center gap-3 rounded-xl border border-white/10 bg-[#0D0D10] px-4.5 py-2.5 text-left transition-all duration-200 hover:border-amber-500/40 hover:bg-[#141418] hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 ${
-        isLarge ? "py-3 px-5" : ""
+      className={`inline-flex items-center gap-3 rounded-xl border border-zinc-200 bg-white px-4 py-2 text-left transition-all duration-200 hover:border-zinc-300 hover:bg-zinc-50 hover:shadow-xs focus:outline-none focus:ring-2 focus:ring-zinc-950 ${
+        isLarge ? "py-2.5 px-5 shadow-xs" : ""
       } ${className}`}
     >
       {/* Official Google Play Logo Mark SVG */}
@@ -47,10 +47,10 @@ export function GooglePlayBadge({ className = "", size = "md" }: GooglePlayBadge
         />
       </svg>
       <div>
-        <p className="text-[10px] font-medium uppercase tracking-wider text-[#A1A1AA] leading-none">
+        <p className="text-[10px] font-medium uppercase tracking-wider text-zinc-500 leading-none">
           Get it on
         </p>
-        <p className="mt-0.5 text-sm font-semibold tracking-tight text-[#F5F5F5] leading-tight">
+        <p className="mt-0.5 text-sm font-semibold tracking-tight text-zinc-950 leading-tight">
           Google Play
         </p>
       </div>
