@@ -84,3 +84,17 @@
     - Active links: `Features` · `Science` · `Architecture` · `Blog` · `Affiliate`
   - **Pure White Favicon:** Updated `public/icon.svg` with pure white (`#FFFFFF`) Khuraki "K" mark on transparent background for crisp visibility on dark browser tabs.
   - **Build Verification:** Next.js static export compiled cleanly in 0.8s (`Frontend/out/`).
+
+- **2026-10-09 (Update 9 - Floating Island Dock Header, Animated CTA & Logo Update):**
+  - **Centered Floating Dock Island (`site-header.tsx` - 137 lines):**
+    - Refactored full-width header to a centered floating dock: `fixed top-4 inset-x-0 z-50 mx-auto w-[calc(100%-2rem)] max-w-4xl`.
+    - Translucent glass shell: `rounded-full border border-zinc-200/80 bg-white/85 px-4 py-2.5 shadow-sm backdrop-blur-md`.
+    - 3-Zone Flex alignment: Left (Brand wordmark), Center (Desktop nav links: Features, Science, Architecture, Blog, Affiliate), Right (CommandSearch pill, AnimatedCtaButton, mobile hamburger toggle).
+  - **Animated CTA Button (`animated-cta-button.tsx` - 39 lines):**
+    - High-contrast black pill (`bg-zinc-950 text-white rounded-full px-4 py-1.5 text-xs font-semibold`).
+    - Shimmer keyframe border sweep (`@keyframes header-shimmer` in `globals.css`) + subtle emerald live pulse beacon.
+    - Lucide `Download` icon + "Get Khuraki" label linking to `siteConfig.links.googlePlay`.
+  - **Attached Logo Updated (`public/khuraki-logo.png`):**
+    - Updated to the official user-provided logo with orange squircle butterfly-K icon and Khuraki wordmark on transparent background.
+  - **Strict Line Constraints:** Maintained `site-header.tsx` < 180 lines, `animated-cta-button.tsx` < 90 lines, and `globals.css` < 25 added lines.
+

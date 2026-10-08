@@ -13,5 +13,6 @@ export const siteConfig = {
     privacy: "/privacy/",
     terms: "/terms/",
     deleteAccount: "/delete-account/",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.sapsjain.khuraki",
   },
 };
