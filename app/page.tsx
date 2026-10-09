@@ -2,6 +2,7 @@ import React from "react";
 import { siteConfig } from "@/lib/site-config";
 import { HeroPhoneStage } from "@/components/hero/hero-phone-stage";
 import { BentoGrid } from "@/components/bento/bento-grid";
+import { WorkflowSection } from "@/components/workflow/workflow-section";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function HomePage() {
@@ -85,43 +86,8 @@ export default function HomePage() {
         <BentoGrid />
       </div>
 
-      {/* Workflow Section: How Khuraki Works */}
-      <section className="relative mx-auto mt-16 max-w-6xl px-4 py-16 sm:px-6 lg:px-8 border-t border-zinc-200">
-        <div className="mb-12 max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
-            Transparent Workflow
-          </p>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
-            A nutrition plan that adapts as your body changes.
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-2xs transition-all hover:border-zinc-300 hover:shadow-xs">
-            <span className="font-mono text-xs font-bold text-amber-600">01</span>
-            <h3 className="mt-3 text-lg font-bold text-zinc-950">Calculate Baseline</h3>
-            <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
-              Your targets use peer-reviewed Mifflin-St Jeor and Katch-McArdle metabolic formulas based on your body composition.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-2xs transition-all hover:border-zinc-300 hover:shadow-xs">
-            <span className="font-mono text-xs font-bold text-amber-600">02</span>
-            <h3 className="mt-3 text-lg font-bold text-zinc-950">Log Seamlessly</h3>
-            <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
-              Snap food photos or dictate meals in natural Hinglish or English. Multi-item dishes decompose automatically into macros.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-2xs transition-all hover:border-zinc-300 hover:shadow-xs">
-            <span className="font-mono text-xs font-bold text-amber-600">03</span>
-            <h3 className="mt-3 text-lg font-bold text-zinc-950">Adaptive Calibration</h3>
-            <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
-              Track weigh-ins across 14-day rolling windows. Khuraki recalibrates your energy expenditure to prevent plateaus.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* How It Works / Step-by-Step Workflow Section */}
+      <WorkflowSection />
     </main>
   );
 }
