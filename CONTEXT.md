@@ -45,36 +45,32 @@
 ### 2.2 Application Routes (`app/`)
 | File Path | Description & Exact Responsibility |
 | :--- | :--- |
-| [`app/layout.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/layout.tsx) | Root HTML layout. Injects OpenGraph/Twitter metadata, `SoftwareApplication` JSON-LD structured data, dark 3D body background (`bg-[#050914] text-white`), `SiteHeader`, and `SiteFooter`. |
-| [`app/globals.css`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/globals.css) | Core design system tokens (`--canvas`, `--surface`, `--border-subtle`, `--text-primary`), dark 3D materials, and custom range slider rules. |
-| [`app/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/page.tsx) | Main landing page: Flagship 3D Cinematic Hero with optimized snappy scroll scrub, dark glassmorphic Bento Grid, and transparent workflow step cards. |
-| [`app/cinematic/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/cinematic/page.tsx) | Full-screen 3D cinematic scrub experience powered by GSAP ScrollTrigger, physical skeuomorphic materials, and dynamic mouse tilt lighting. |
+| [`app/layout.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/layout.tsx) | Root HTML layout. Injects OpenGraph/Twitter metadata, `SoftwareApplication` JSON-LD structured data, clean light body background, `SiteHeader`, and `SiteFooter`. |
+| [`app/globals.css`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/globals.css) | Core design system tokens (`--canvas`, `--surface`, `--border-subtle`, `--text-primary`), custom light range slider rules, and ambient hero glow. |
+| [`app/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/page.tsx) | Main landing page: Clean white hero with editorial headline, interactive 10s calorie slider, architectural bento grid, and transparent workflow step cards. Contained within `max-w-[1400px]` dashed border frame. |
 | [`app/privacy/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/privacy/page.tsx) | Privacy Policy: Google Play compliant documentation of zero photo storage, transient vision tokens, and 30-day account deletion grace window. |
 | [`app/terms/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/terms/page.tsx) | Terms of Service: Metabolic math transparency, informational fitness disclaimer, and user agreements. |
 | [`app/delete-account/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/delete-account/page.tsx) | Account Deletion Portal: In-app step-by-step guidance and fallback web deletion request email form. |
 | [`app/robots.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/robots.ts) | Static `robots.txt` generator allowing all search engines and referencing the sitemap. |
-| [`app/sitemap.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/sitemap.ts) | Static `sitemap.xml` generator mapping `/`, `/cinematic/`, `/privacy/`, `/terms/`, and `/delete-account/`. |
+| [`app/sitemap.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/sitemap.ts) | Static `sitemap.xml` generator mapping `/`, `/privacy/`, `/terms/`, and `/delete-account/`. |
 
 ---
 
 ### 2.3 Component Suites (`components/`)
 
 #### Layout Components (`components/layout/`)
-- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-4xl rounded-full bg-[#050914]/85 backdrop-blur-xl border border-white/10 shadow-2xl`). Houses the high-contrast white Khuraki wordmark (`/khuraki-logo-white.png`), desktop navigation links with amber active dot, white tactile "Download App" CTA pill, and responsive mobile drawer.
-- [`SiteFooter.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-footer.tsx): Dark obsidian footer on `bg-[#050914] border-t border-white/10` with blue ambient underglow, white Khuraki wordmark, legal navigation links, copyright, and informational medical disclaimer.
-- [`LegalPageShell.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/legal-page-shell.tsx): Shared wrapper for legal documents with back navigation button, metadata timestamps, and crisp light typography on dark canvas.
+- [`SiteHeader.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-header.tsx): Centered floating dock island (`fixed top-4 inset-x-0 mx-auto max-w-3xl rounded-full bg-white/85 backdrop-blur-md border border-zinc-200/80 shadow-sm`). Houses the official Khuraki wordmark (`/khuraki-logo.png`), desktop navigation links (`Features`, `Science`, `Architecture`, `Blog`, `Affiliate`), and responsive mobile drawer.
+- [`SiteFooter.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/site-footer.tsx): Clean light footer on `bg-zinc-50/80 border-t border-zinc-200` with official Khuraki wordmark, legal navigation links, copyright, and informational medical disclaimer.
+- [`LegalPageShell.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/legal-page-shell.tsx): Shared wrapper for legal documents with back navigation button, metadata timestamps, and high-contrast typography.
 - [`AnnouncementBanner.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/announcement-banner.tsx): Top announcement ribbon component (available on demand).
 
 #### Interactive UI Components (`components/ui/`)
-- [`cinematic-landing-hero.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/cinematic-landing-hero.tsx): 3D skeuomorphic GSAP ScrollTrigger hero with mouse tilt physics, Midnight Sapphire card, concentric progress dials, and floating badges.
-- [`cinematic-hero-demo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/cinematic-hero-demo.tsx): Isolated demo wrapper component.
 - [`button.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/button.tsx): Radix Slot + CVA button primitive with full shadcn variants.
 - [`phone-mockups-1.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1.tsx): Auto-rotating iPhone 15 Pro mockup carousel (`PhoneMockupBasic`) displaying interactive app preview screens.
 - [`phone-mockups-1-utils/phone-carousel.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1-utils/phone-carousel.tsx): iPhone 15 Pro SVG frame mockup with carousel controls, autoplay, and pause states.
 - [`InteractiveDemo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/interactive-demo.tsx): 10-second calorie demonstrator card. Features a single slider (1,400 to 3,200 kcal), dynamic concentric calorie ring, and real-time deterministic macro chips.
 - [`MacroRing.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/macro-ring.tsx): Concentric SVG arc calculating progress percentage and stroke dashoffset dynamically.
 - [`GooglePlayBadge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/google-play-badge.tsx): Reusable Google Play badge component with official multi-color vector mark.
-
 
 
 #### Hero & Showcase Components (`components/hero/`)

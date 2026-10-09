@@ -19,7 +19,7 @@ export function LegalPageShell({
       <div className="mb-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-medium text-zinc-400 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 text-xs font-medium text-zinc-500 transition-colors hover:text-zinc-950"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>Back to Home</span>
@@ -27,20 +27,20 @@ export function LegalPageShell({
       </div>
 
       {/* Header */}
-      <header className="mb-12 border-b border-white/10 pb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+      <header className="mb-12 border-b border-zinc-200 pb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
           Legal &amp; Compliance
         </p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl">
           {title}
         </h1>
-        <p className="mt-2 text-xs text-zinc-400 font-mono">
+        <p className="mt-2 text-xs text-zinc-500 font-mono">
           Last updated: {effectiveDate}
         </p>
       </header>
 
       {/* Legal Prose Content */}
-      <article className="max-w-none space-y-8 text-sm leading-relaxed text-zinc-300 [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-white [&_h3]:text-base [&_h3]:font-semibold [&_h3]:text-white [&_strong]:text-white [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-amber-400 [&_a]:underline hover:[&_a]:text-amber-300">
+      <article className="max-w-none space-y-8 text-sm leading-relaxed text-zinc-600 [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-zinc-950 [&_h3]:text-base [&_h3]:font-semibold [&_h3]:text-zinc-950 [&_strong]:text-zinc-900 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-amber-600 [&_a]:underline hover:[&_a]:text-amber-700">
         {children}
       </article>
     </main>
