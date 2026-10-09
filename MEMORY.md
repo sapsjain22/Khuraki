@@ -136,5 +136,17 @@
     - 3-zone layout with active dot indicator on primary nav link and dark "Download App" pill with trailing circle arrow.
   - **Strict Line Limit Compliance:** All 5 target files strictly within configured limits.
 
+- **2026-10-09 (Update 13 - Khuraki Cinematic Landing Hero & Showcase Route):**
+  - **Dependencies Installed:** `gsap` and `@types/gsap` for ScrollTrigger scrub animations.
+  - **Component (`components/ui/cinematic-landing-hero.tsx`):**
+    - 3D physical skeuomorphic materials with dynamic mouse tilt lighting (`requestAnimationFrame`).
+    - 7,000px GSAP ScrollTrigger timeline: reveals headline lockups, elevates 3D Midnight Sapphire card, animates concentric circular progress dial up to 2,450 kcal, pops floating glass badges (`🔥 14-Day Calibrated`, `⚡ 100% Offline SQLite`), scales card back, and surfaces tactile store buttons.
+    - Tailored completely to Khuraki's metabolic nutrition engine, deterministic math, and Google Play Store link.
+  - **Demo & Route:**
+    - `components/ui/cinematic-hero-demo.tsx`: Isolated wrapper demo component.
+    - `app/cinematic/page.tsx`: Dedicated full-screen showcase route with floating back navigation.
+  - **Static Build:** Next.js static export compiled cleanly in 875ms with 0 type errors.
+
+
 
 

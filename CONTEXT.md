@@ -47,12 +47,13 @@
 | :--- | :--- |
 | [`app/layout.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/layout.tsx) | Root HTML layout. Injects OpenGraph/Twitter metadata, `SoftwareApplication` JSON-LD structured data, clean light body background, `SiteHeader`, and `SiteFooter`. |
 | [`app/globals.css`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/globals.css) | Core design system tokens (`--canvas`, `--surface`, `--border-subtle`, `--text-primary`), custom light range slider rules, and ambient hero glow. |
-| [`app/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/page.tsx) | Main landing page: Clean white hero with editorial headline, interactive 10s calorie slider, architectural bento grid, and transparent workflow step cards. Contained within `max-w-[1400px]` dashed border frame. |
+| [`app/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/page.tsx) | Main landing page: Centered editorial hero with ambient dual-gradient mesh, 3-device phone stage with integrated carousel, architectural bento grid, and transparent workflow step cards. |
+| [`app/cinematic/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/cinematic/page.tsx) | Full-screen 3D cinematic scrub experience powered by GSAP ScrollTrigger, physical skeuomorphic materials, and dynamic mouse tilt lighting. |
 | [`app/privacy/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/privacy/page.tsx) | Privacy Policy: Google Play compliant documentation of zero photo storage, transient vision tokens, and 30-day account deletion grace window. |
 | [`app/terms/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/terms/page.tsx) | Terms of Service: Metabolic math transparency, informational fitness disclaimer, and user agreements. |
 | [`app/delete-account/page.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/delete-account/page.tsx) | Account Deletion Portal: In-app step-by-step guidance and fallback web deletion request email form. |
 | [`app/robots.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/robots.ts) | Static `robots.txt` generator allowing all search engines and referencing the sitemap. |
-| [`app/sitemap.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/sitemap.ts) | Static `sitemap.xml` generator mapping `/`, `/privacy/`, `/terms/`, and `/delete-account/`. |
+| [`app/sitemap.ts`](file:///f:/App%20Dev/Fitness%20App/Frontend/app/sitemap.ts) | Static `sitemap.xml` generator mapping `/`, `/cinematic/`, `/privacy/`, `/terms/`, and `/delete-account/`. |
 
 ---
 
@@ -65,12 +66,15 @@
 - [`AnnouncementBanner.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/layout/announcement-banner.tsx): Top announcement ribbon component (available on demand).
 
 #### Interactive UI Components (`components/ui/`)
+- [`cinematic-landing-hero.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/cinematic-landing-hero.tsx): 3D skeuomorphic GSAP ScrollTrigger hero with mouse tilt physics, Midnight Sapphire card, concentric progress dials, and floating badges.
+- [`cinematic-hero-demo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/cinematic-hero-demo.tsx): Isolated demo wrapper component.
 - [`button.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/button.tsx): Radix Slot + CVA button primitive with full shadcn variants.
 - [`phone-mockups-1.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1.tsx): Auto-rotating iPhone 15 Pro mockup carousel (`PhoneMockupBasic`) displaying interactive app preview screens.
 - [`phone-mockups-1-utils/phone-carousel.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/phone-mockups-1-utils/phone-carousel.tsx): iPhone 15 Pro SVG frame mockup with carousel controls, autoplay, and pause states.
 - [`InteractiveDemo.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/interactive-demo.tsx): 10-second calorie demonstrator card. Features a single slider (1,400 to 3,200 kcal), dynamic concentric calorie ring, and real-time deterministic macro chips.
 - [`MacroRing.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/macro-ring.tsx): Concentric SVG arc calculating progress percentage and stroke dashoffset dynamically.
 - [`GooglePlayBadge.tsx`](file:///f:/App%20Dev/Fitness%20App/Frontend/components/ui/google-play-badge.tsx): Reusable Google Play badge component with official multi-color vector mark.
+
 
 
 #### Hero & Showcase Components (`components/hero/`)
