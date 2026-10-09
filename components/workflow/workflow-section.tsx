@@ -85,8 +85,7 @@ export function WorkflowSection() {
             <motion.div
               key={item.step}
               variants={cardVariants}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative flex flex-col justify-between rounded-3xl border border-zinc-200/85 bg-white p-7 sm:p-8 shadow-2xs transition-all duration-300 hover:border-zinc-300 hover:shadow-md"
+              className="group relative flex flex-col justify-between rounded-3xl border border-zinc-200/85 bg-white p-7 sm:p-8 shadow-2xs transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md will-change-transform"
             >
               <div>
                 {/* Top Row: Squircle Icon + Step Number */}
@@ -118,7 +117,7 @@ export function WorkflowSection() {
           href={downloadUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98]"
+          className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-xs transition-[transform,background-color,box-shadow] duration-200 ease-out hover:bg-zinc-800 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
           aria-label="Download on Google Play"
         >
           {/* Google Play Multi-Color Vector Mark */}

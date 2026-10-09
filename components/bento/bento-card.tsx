@@ -58,11 +58,10 @@ export function BentoCard({
     <motion.article
       ref={cardRef}
       variants={bentoCardVariants}
-      whileHover={{ y: -4, transition: { duration: 0.2 } }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200/85 bg-white p-6 sm:p-7 shadow-2xs transition-all duration-300 hover:border-zinc-300 hover:shadow-md",
+        "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200/85 bg-white p-6 sm:p-7 shadow-2xs transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md will-change-transform",
         className
       )}
     >
