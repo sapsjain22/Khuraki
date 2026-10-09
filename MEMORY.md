@@ -180,14 +180,21 @@
     - Refined navigation row, hairline divider (`border-zinc-100`), copyright, disclaimer, and social icons to neutral light-mode tones.
   - **Build Verification:** Next.js static build succeeded with code 0; visual check verified on `http://localhost:3000`.
 
-- **2026-10-10 (Update 17 - Simplified Minimal Borderless Footer):**
-  - **Component Streamlining (`components/layout/site-footer.tsx` - 138 lines):**
-    - Completely removed the medical/metabolic disclaimer text.
-    - Removed all thin borders (inner dividing hairline and outer card frame).
-    - Tightened vertical rhythm, eliminating unnecessary empty space.
-    - Simplified navigation links strictly to: `Home`, `Privacy`, `Terms`, `Contact`, `Blog`, and `Affiliate`.
-    - Integrated top brand lockup with minimal Google Play download pill and bottom copyright with social icons.
-  - **Build Verification:** Static export compiled cleanly with zero errors; verified in headless browser on `http://localhost:3000`.
+- **2026-10-10 (Update 18 - Silky Smooth Hover Animations & Global Smooth Scrolling):**
+  - **Eliminated Hover Jitter on Bento & Workflow Cards:**
+    - Root-caused the card jitter: Framer Motion `whileHover={{ y: -4 }}` was competing with Tailwind CSS `transition-all duration-300` on the same DOM elements in `components/bento/bento-card.tsx` and `components/workflow/workflow-section.tsx`.
+    - Removed `whileHover` JS transforms and applied GPU-composited CSS transforms: `transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md will-change-transform`.
+  - **Standardized Micro-Interactions on CTA Buttons & Links:**
+    - Updated buttons in `SiteHeader`, `HomePage` hero, `WorkflowSection`, and `SiteFooter` to `transition-[transform,background-color,box-shadow] duration-200 ease-out hover:bg-zinc-800 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98]`.
+    - Added subtle hover lift to hero architectural invariant trust chips.
+    - Updated navigation and footer links with `transition-colors duration-200 ease-out hover:text-zinc-950`.
+  - **Global Smooth Scrolling & Scroll Padding:**
+    - Added `html { scroll-behavior: smooth; scroll-padding-top: 5rem; }` in `app/globals.css`.
+    - Anchor link navigation (`#features`, `#how-it-works`) glides seamlessly with an 80px breathing buffer below the sticky 64px header.
+  - **Verification:**
+    - Next.js Turbopack build succeeded with code 0 (`npm run build`).
+    - Verified smooth anchor scroll gliding and zero-jitter card hover in the live browser.
+
 
 
 
