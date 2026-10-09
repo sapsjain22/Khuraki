@@ -148,5 +148,16 @@
     - Replaced old inline markup with `<WorkflowSection />`, keeping `page.tsx` well under 260 lines.
   - **Verification:** Static export compiled with zero errors and visually validated via browser subagent on `http://localhost:3000`.
 
+- **2026-10-10 (Update 14 - Enclosed Island Footer Redesign - Deep Monochrome Black):**
+  - **Reference Design Alignment:** Adapted the "Large 07 brand" template layout into an enclosed floating island card footer matching the top hero frame geometry (`rounded-[32px] sm:rounded-[36px]`, `max-w-[1360px]`).
+  - **Component Rewrite (`components/layout/site-footer.tsx` - 176 lines):**
+    - Deep Monochrome Black (`bg-zinc-950 border border-zinc-800/90 shadow-xl`) selected via user review.
+    - Top Left: White brand logotype (`/khuraki-logo-white.png`), narrative mission statement, horizontal navigation link row (`Overview`, `Features`, `Science`, `Architecture`, `Privacy`, `Terms`, `Delete Account`, `Support`).
+    - Top Right: `GET THE APP` section with active Google Play Store badge and App Store "Soon" badge pill.
+    - Hairline divider (`border-zinc-800/80`).
+    - Bottom Left: Copyright notice and required medical/metabolic disclaimer.
+    - Bottom Right: Single-weight vector SVG social icons (X, LinkedIn, GitHub, Mail) with $\ge 44\times 44$px touch targets.
+  - **Build Verification:** Production static export compiled with zero errors; visual regression confirmed via browser subagent on `http://localhost:3000`.
+
 
 
