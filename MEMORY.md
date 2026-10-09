@@ -147,6 +147,25 @@
     - `app/cinematic/page.tsx`: Dedicated full-screen showcase route with floating back navigation.
   - **Static Build:** Next.js static export compiled cleanly in 875ms with 0 type errors.
 
+- **2026-10-09 (Update 14 - Full Homepage Replacement: 3D Cinematic Hero, Dark Header & Footer):**
+  - **Full Replacement on Homepage (`app/page.tsx`):**
+    - Replaced the prior static editorial hero completely with the GSAP-powered 3D `CinematicHero`.
+    - Optimized scroll scrub length from `+=7000` down to a snappy `+=1600` (`scrub: 0.6`), providing responsive card rise, dial spin, badge pop, and card pullback in ~2 wheel turns without scroll fatigue.
+    - Eliminated horizontal viewport expansion by enforcing `w-full max-w-full overflow-x-hidden`.
+  - **Matching Dark 3D Floating Header (`components/layout/site-header.tsx` - 129 lines):**
+    - Pinned floating dock island styled with dark translucent glass: `bg-[#050914]/85 border-white/10 backdrop-blur-xl shadow-2xl`.
+    - Integrated high-contrast white logo (`public/khuraki-logo-white.png`) with orange squircle icon.
+    - Styled desktop nav links with muted zinc to active white contrast (`text-zinc-400 hover:text-white`) and warm amber active indicator dot.
+    - Tactile high-contrast white CTA pill: "Download App" with trailing arrow icon linking directly to Google Play.
+  - **Matching Dark 3D Footer (`components/layout/site-footer.tsx` - 82 lines):**
+    - Deep obsidian background (`bg-[#050914] border-t border-white/10`) with subtle blue ambient underglow.
+    - White Khuraki wordmark, legal compliance routes (`/privacy/`, `/terms/`, `/delete-account/`), `3D Experience` route link, and Google Play-compliant medical disclaimer.
+  - **Unified Dark 3D Aesthetic Across Whole Portal:**
+    - Updated `BentoGrid` and `BentoCard` to dark glassmorphic styling (`bg-[#0A101D]/80 border-white/10 backdrop-blur-md hover:border-white/20 hover:bg-[#0E1729]`).
+    - Configured `app/layout.tsx` with `bg-[#050914] text-white` body styling for a seamless midnight obsidian aesthetic throughout.
+    - Validated in browser via automated E2E inspection: zero horizontal scrollbars, 0 visual overlaps, snappy scroll transitions.
+    - Static production export builds cleanly in < 900ms (`Frontend/out/`).
+
 
 
 

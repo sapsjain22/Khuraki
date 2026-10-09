@@ -19,27 +19,27 @@ export function BentoCard({
 }: BentoCardProps) {
   return (
     <article
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-zinc-200 bg-white p-6 shadow-2xs transition-all duration-200 hover:border-zinc-300 hover:shadow-xs ${className}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0A101D]/80 backdrop-blur-md p-6 shadow-xl transition-all duration-300 hover:border-white/20 hover:bg-[#0E1729] ${className}`}
     >
       <div>
         <div className="mb-4 flex items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5">
             {icon}
           </div>
-          <span className="rounded-full border border-zinc-200 bg-zinc-100 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-zinc-600">
+          <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-zinc-300">
             {tag}
           </span>
         </div>
 
-        <h3 className="text-lg font-bold tracking-tight text-zinc-950">
+        <h3 className="text-lg font-bold tracking-tight text-white">
           {title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+        <p className="mt-2 text-sm leading-relaxed text-zinc-400">
           {description}
         </p>
       </div>
 
-      {footerContent && <div className="mt-6 border-t border-zinc-100 pt-4">{footerContent}</div>}
+      {footerContent && <div className="mt-6 border-t border-white/10 pt-4">{footerContent}</div>}
     </article>
   );
 }

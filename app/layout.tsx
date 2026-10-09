@@ -72,7 +72,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-white text-zinc-950 antialiased selection:bg-amber-100 selection:text-amber-900">
+      <body className="min-h-screen bg-[#050914] text-white antialiased selection:bg-amber-500/30 selection:text-amber-200">
         <SiteHeader />
         <div className="relative min-h-[calc(100vh-4rem)]">
           {children}

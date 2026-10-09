@@ -20,7 +20,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 mx-auto w-[calc(100%-2rem)] max-w-4xl">
-      <div className="flex items-center justify-between rounded-full border border-zinc-200/80 bg-white/85 px-4 sm:px-5 py-2.5 shadow-sm backdrop-blur-md transition-all">
+      <div className="flex items-center justify-between rounded-full border border-white/10 bg-[#050914]/85 px-4 sm:px-5 py-2.5 shadow-2xl backdrop-blur-xl transition-all">
         {/* Zone 1: Left (Brand Wordmark Logo) */}
         <Link
           href="/"
@@ -28,7 +28,7 @@ export function SiteHeader() {
           aria-label="Khuraki Home"
         >
           <Image
-            src="/khuraki-logo.png"
+            src="/khuraki-logo-white.png"
             alt="Khuraki"
             width={112}
             height={26}
@@ -37,7 +37,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        {/* Zone 2: Center (Nav Capsule with Active Dot - hidden on mobile) */}
+        {/* Zone 2: Center (Nav Capsule with Active Dot) */}
         <nav
           className="hidden md:flex items-center gap-6 lg:gap-7"
           aria-label="Main navigation"
@@ -48,31 +48,30 @@ export function SiteHeader() {
               href={link.href}
               className={`flex items-center gap-1.5 text-xs font-semibold transition-colors ${
                 link.active
-                  ? "text-zinc-950 font-bold"
-                  : "text-zinc-600 hover:text-zinc-950"
+                  ? "text-white font-bold"
+                  : "text-zinc-400 hover:text-white"
               }`}
             >
               {link.active && (
-                <span className="h-1.5 w-1.5 rounded-full bg-zinc-950" />
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
               )}
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Zone 3: Right (Download Action Pill + Mobile Hamburger) */}
+        {/* Zone 3: Right (Tactile Download Action Pill + Mobile Hamburger) */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Download App Action Pill */}
           <a
             href={downloadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-zinc-950 px-3.5 sm:px-4 py-1.5 text-xs font-semibold text-white shadow-xs transition-all hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 sm:px-4 py-1.5 text-xs font-semibold text-zinc-950 shadow-md transition-all hover:bg-zinc-200 hover:scale-[1.02] active:scale-[0.98]"
             aria-label="Download App on Google Play"
           >
             <span>Download App</span>
-            <div className="flex h-4 w-4 items-center justify-center rounded-full bg-white/20">
-              <ArrowUpRight className="h-2.5 w-2.5 text-white" />
+            <div className="flex h-4 w-4 items-center justify-center rounded-full bg-zinc-950/10">
+              <ArrowUpRight className="h-2.5 w-2.5 text-zinc-950" />
             </div>
           </a>
 
@@ -80,7 +79,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className="flex md:hidden h-8 w-8 items-center justify-center rounded-full text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            className="flex md:hidden h-8 w-8 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/10 hover:text-white"
             aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? (
@@ -94,21 +93,33 @@ export function SiteHeader() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="mt-2 w-full rounded-2xl border border-zinc-200/80 bg-white/95 p-4 shadow-lg backdrop-blur-md md:hidden animate-in fade-in-50 slide-in-from-top-2 duration-150">
+        <div className="mt-2 w-full rounded-2xl border border-white/10 bg-[#050914]/95 p-4 shadow-2xl backdrop-blur-xl md:hidden animate-in fade-in-50 slide-in-from-top-2 duration-150">
           <nav className="flex flex-col gap-1.5" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/10 hover:text-white"
               >
                 {link.active && (
-                  <span className="h-1.5 w-1.5 rounded-full bg-zinc-950" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                 )}
                 {link.label}
               </Link>
             ))}
+            <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-white py-2.5 text-xs font-semibold text-zinc-950"
+              >
+                <span>Download on Google Play</span>
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </nav>
         </div>
       )}

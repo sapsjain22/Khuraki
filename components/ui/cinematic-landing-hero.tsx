@@ -30,23 +30,23 @@ const INJECTED_STYLES = `
       -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
   }
 
-  /* PHYSICAL SKEUOMORPHIC MATERIALS */
+  /* PHYSICAL SKEUOMORPHIC MATERIALS (Dark 3D Obsidian Aesthetic) */
   .text-3d-matte {
-      color: #09090b;
+      color: #FFFFFF;
       text-shadow: 
-          0 10px 30px rgba(0, 0, 0, 0.15), 
-          0 2px 4px rgba(0, 0, 0, 0.08);
+          0 10px 30px rgba(0, 0, 0, 0.5), 
+          0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .text-silver-matte {
-      background: linear-gradient(180deg, #09090b 0%, #71717a 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, #71717a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       transform: translateZ(0);
       filter: 
-          drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1)) 
-          drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.05));
+          drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3)) 
+          drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
   }
 
   /* INSIDE THE CARD: Hardcoded Silver/White for dark background */
@@ -259,9 +259,9 @@ export function CinematicHero({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=7000",
+          end: "+=1600",
           pin: true,
-          scrub: 1,
+          scrub: 0.6,
           anticipatePin: 1,
         },
       });
@@ -306,7 +306,7 @@ export function CinematicHero({
   return (
     <div
       ref={containerRef}
-      className={cn("relative w-screen h-screen overflow-hidden flex items-center justify-center bg-white text-zinc-950 font-sans antialiased", className)}
+      className={cn("relative w-full max-w-full h-screen overflow-hidden flex items-center justify-center bg-[#050914] text-white font-sans antialiased", className)}
       style={{ perspective: "1500px" }}
       {...props}
     >
@@ -315,7 +315,7 @@ export function CinematicHero({
       <div className="bg-grid-theme absolute inset-0 z-0 pointer-events-none opacity-50" aria-hidden="true" />
 
       {/* BACKGROUND LAYER 1: Hero Editorial Texts */}
-      <div className="hero-text-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 will-change-transform transform-style-3d">
+      <div className="hero-text-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-full max-w-full px-4 will-change-transform transform-style-3d">
         <h1 className="text-track gsap-reveal text-3d-matte text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-2">
           {tagline1}
         </h1>
@@ -325,11 +325,11 @@ export function CinematicHero({
       </div>
 
       {/* BACKGROUND LAYER 2: Tactile CTA Buttons */}
-      <div className="cta-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 gsap-reveal pointer-events-auto will-change-transform">
+      <div className="cta-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-full max-w-full px-4 gsap-reveal pointer-events-auto will-change-transform">
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-silver-matte">
           {ctaHeading}
         </h2>
-        <p className="text-zinc-600 text-lg md:text-xl mb-12 max-w-xl mx-auto font-normal leading-relaxed">
+        <p className="text-zinc-400 text-lg md:text-xl mb-12 max-w-xl mx-auto font-normal leading-relaxed">
           {ctaDescription}
         </p>
         <div className="flex flex-col sm:flex-row gap-5 items-center">
