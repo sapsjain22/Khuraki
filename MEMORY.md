@@ -136,5 +136,17 @@
     - 3-zone layout with active dot indicator on primary nav link and dark "Download App" pill with trailing circle arrow.
   - **Strict Line Limit Compliance:** All 5 target files strictly within configured limits.
 
+- **2026-10-10 (Update 13 - Motion Staggered Bento Workflow Redesign & High-Intent CTA):**
+  - **Reference Design Alignment:** Adapted the 3-step workflow design from user-provided reference to clean light-mode shadcn aesthetic following `/anti-slop-design` and `/antigravity-design-expert`.
+  - **Dedicated Component (`components/workflow/workflow-section.tsx` - 146 lines):**
+    - Centered editorial header lockup: `HOW IT WORKS` uppercase tracked eyebrow, display headline *"From baseline to calibrated routine in three steps"*, and clear explanatory subtitle.
+    - Motion staggered 3-card grid using `motion/react` with spring damping (`damping: 24`, `stiffness: 180`) and viewport entrance trigger.
+    - Card geometry: `rounded-3xl` (24px) container enclosing `rounded-2xl` (16px) squircle icon boxes and monospace step indicators (`01`, `02`, `03`).
+    - 3 factual workflow steps: `Calculate Baseline` (Mifflin-St Jeor & Katch-McArdle math), `Log In Seconds` (AI meal decomposition & voice input), and `Adaptive Recalibration` (14-day rolling expenditure).
+    - High-intent CTA button: Dark rounded-full pill with official multi-color Google Play vector mark and trailing `ArrowUpRight` circle icon linking directly to `siteConfig.links.googlePlay`.
+  - **Clean Page Integration (`app/page.tsx` - 93 lines):**
+    - Replaced old inline markup with `<WorkflowSection />`, keeping `page.tsx` well under 260 lines.
+  - **Verification:** Static export compiled with zero errors and visually validated via browser subagent on `http://localhost:3000`.
+
 
 
