@@ -159,5 +159,18 @@
     - Bottom Right: Single-weight vector SVG social icons (X, LinkedIn, GitHub, Mail) with $\ge 44\times 44$px touch targets.
   - **Build Verification:** Production static export compiled with zero errors; visual regression confirmed via browser subagent on `http://localhost:3000`.
 
+- **2026-10-10 (Update 15 - Header & Hero Complete Redesign: Mobile Preview Removed):**
+  - **SiteHeader Modernization (`components/layout/site-header.tsx` - 108 lines):**
+    - Replaced floating pill dock with a full-width sticky professional glass navbar (`sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-white/85 backdrop-blur-md`).
+    - Standard 64px height (`h-16`) aligned to `max-w-[1360px]` matching the hero frame.
+    - Simplified desktop navigation links (`Features`, `Science`, `Architecture`, `How It Works`, `Privacy`) with dark "Download App" CTA button and mobile drawer.
+  - **Minimalist Editorial Hero (`app/page.tsx` - 108 lines):**
+    - Completely removed `<HeroPhoneStage />` and its 3 tilted phone mockups, external stock food photos, and fake review badges.
+    - Purged AI-slop ambient gradient blobs (`ambient-glow-left`, `ambient-glow-right`) and purple sparkles.
+    - Added understated version pill (`Deterministic Nutrition Engine · v1.0` with emerald pulse dot).
+    - Added architectural trust invariant chips: `100% Offline SQLite`, `Zero Cloud Photo Storage`, `Mifflin-St Jeor Math`, and `Adaptive ±15% Bounds`.
+    - Deleted unused files `components/hero/hero-phone-stage.tsx` and `components/hero/floating-badge.tsx`.
+  - **Build Verification:** Clean Next.js static build with zero errors; visual validation on `http://localhost:3000`.
+
 
 
