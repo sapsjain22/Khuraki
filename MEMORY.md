@@ -180,5 +180,14 @@
     - Refined navigation row, hairline divider (`border-zinc-100`), copyright, disclaimer, and social icons to neutral light-mode tones.
   - **Build Verification:** Next.js static build succeeded with code 0; visual check verified on `http://localhost:3000`.
 
+- **2026-10-10 (Update 17 - Simplified Minimal Borderless Footer):**
+  - **Component Streamlining (`components/layout/site-footer.tsx` - 138 lines):**
+    - Completely removed the medical/metabolic disclaimer text.
+    - Removed all thin borders (inner dividing hairline and outer card frame).
+    - Tightened vertical rhythm, eliminating unnecessary empty space.
+    - Simplified navigation links strictly to: `Home`, `Privacy`, `Terms`, `Contact`, `Blog`, and `Affiliate`.
+    - Integrated top brand lockup with minimal Google Play download pill and bottom copyright with social icons.
+  - **Build Verification:** Static export compiled cleanly with zero errors; verified in headless browser on `http://localhost:3000`.
+
 
 
