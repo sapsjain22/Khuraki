@@ -37,7 +37,7 @@ export default function HomePage() {
               href={playStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-xs transition-[transform,background-color,box-shadow] duration-200 ease-out hover:bg-zinc-800 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
+              className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-xs smooth-hover-btn"
               aria-label="Download on Google Play"
             >
               <svg
@@ -61,7 +61,7 @@ export default function HomePage() {
             {/* Explore Architecture / Features Pill */}
             <a
               href="#features"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-3 text-xs font-semibold text-zinc-900 shadow-2xs transition-[transform,background-color,border-color,box-shadow] duration-200 ease-out hover:border-zinc-300 hover:bg-zinc-50 hover:-translate-y-0.5 hover:shadow-xs active:translate-y-0 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-3 text-xs font-semibold text-zinc-900 shadow-2xs smooth-hover-pill"
             >
               <span>See the Architecture</span>
               <ArrowRight className="h-3.5 w-3.5 text-zinc-500" />
@@ -70,19 +70,19 @@ export default function HomePage() {
 
           {/* Architectural Invariants Trust Strip */}
           <div className="mt-12 pt-10 border-t border-zinc-100 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-zinc-600 font-medium">
-            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs transition-all duration-200 hover:border-zinc-300 hover:bg-white hover:-translate-y-0.5">
+            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs smooth-hover-pill">
               <WifiOff className="h-3.5 w-3.5 text-zinc-700" />
               <span>100% Offline SQLite</span>
             </div>
-            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs transition-all duration-200 hover:border-zinc-300 hover:bg-white hover:-translate-y-0.5">
+            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs smooth-hover-pill">
               <ShieldCheck className="h-3.5 w-3.5 text-zinc-700" />
               <span>Zero Cloud Photo Storage</span>
             </div>
-            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs transition-all duration-200 hover:border-zinc-300 hover:bg-white hover:-translate-y-0.5">
+            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs smooth-hover-pill">
               <Calculator className="h-3.5 w-3.5 text-zinc-700" />
               <span>Mifflin-St Jeor Math</span>
             </div>
-            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs transition-all duration-200 hover:border-zinc-300 hover:bg-white hover:-translate-y-0.5">
+            <div className="flex items-center gap-2 rounded-full border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-1.5 shadow-2xs smooth-hover-pill">
               <Activity className="h-3.5 w-3.5 text-zinc-700" />
               <span>Adaptive ±15% Bounds</span>
             </div>

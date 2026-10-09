@@ -85,15 +85,15 @@ export function WorkflowSection() {
             <motion.div
               key={item.step}
               variants={cardVariants}
-              className="group relative flex flex-col justify-between rounded-3xl border border-zinc-200/85 bg-white p-7 sm:p-8 shadow-2xs transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md will-change-transform"
+              className="group relative flex flex-col justify-between rounded-3xl border border-zinc-200/85 bg-white p-7 sm:p-8 shadow-2xs smooth-hover-card"
             >
               <div>
                 {/* Top Row: Squircle Icon + Step Number */}
                 <div className="flex items-center justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-zinc-200 bg-zinc-50 shadow-2xs transition-colors group-hover:border-zinc-300 group-hover:bg-white">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-zinc-200 bg-zinc-50 shadow-2xs transition-colors duration-500 ease-out group-hover:border-zinc-300 group-hover:bg-white">
                     <Icon className="h-5 w-5 text-zinc-900" />
                   </div>
-                  <span className="font-mono text-xs font-bold text-zinc-400 transition-colors group-hover:text-zinc-900">
+                  <span className="font-mono text-xs font-bold text-zinc-400 transition-colors duration-500 ease-out group-hover:text-zinc-900">
                     {item.step}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export function WorkflowSection() {
           href={downloadUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-xs transition-[transform,background-color,box-shadow] duration-200 ease-out hover:bg-zinc-800 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
+          className="inline-flex items-center gap-2.5 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-xs smooth-hover-btn"
           aria-label="Download on Google Play"
         >
           {/* Google Play Multi-Color Vector Mark */}

@@ -46,7 +46,7 @@ export function SiteFooter() {
           href={playStoreUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-4 py-2 text-xs font-semibold text-white shadow-xs transition-[transform,background-color,box-shadow] duration-200 ease-out hover:bg-zinc-800 hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0 active:scale-[0.98] w-fit"
+          className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-4 py-2 text-xs font-semibold text-white shadow-xs smooth-hover-btn w-fit"
           aria-label="Download on Google Play"
         >
           <svg
@@ -77,7 +77,7 @@ export function SiteFooter() {
           <Link
             key={link.label}
             href={link.href}
-            className="transition-colors hover:text-zinc-950"
+            className="transition-colors duration-300 ease-out hover:text-zinc-950"
           >
             {link.label}
           </Link>
@@ -95,7 +95,7 @@ export function SiteFooter() {
             href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-all duration-300 ease-out hover:bg-zinc-100 hover:text-zinc-950 hover:-translate-y-0.5"
             aria-label="Khuraki on X"
           >
             <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -108,7 +108,7 @@ export function SiteFooter() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-all duration-300 ease-out hover:bg-zinc-100 hover:text-zinc-950 hover:-translate-y-0.5"
             aria-label="Khuraki on LinkedIn"
           >
             <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -121,7 +121,7 @@ export function SiteFooter() {
             href="https://github.com/sapsjain22/-Khuraki"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-all duration-300 ease-out hover:bg-zinc-100 hover:text-zinc-950 hover:-translate-y-0.5"
             aria-label="Khuraki GitHub Repository"
           >
             <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -132,7 +132,7 @@ export function SiteFooter() {
           {/* Email / Support */}
           <a
             href={`mailto:${siteConfig.supportEmail}`}
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-all duration-300 ease-out hover:bg-zinc-100 hover:text-zinc-950 hover:-translate-y-0.5"
             aria-label="Contact Support"
           >
             <Mail className="h-3.5 w-3.5 text-zinc-500" />

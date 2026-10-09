@@ -61,14 +61,14 @@ export function BentoCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200/85 bg-white p-6 sm:p-7 shadow-2xs transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md will-change-transform",
+        "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200/85 bg-white p-6 sm:p-7 shadow-2xs smooth-hover-card",
         className
       )}
     >
       {/* Interactive Pointer-Tracking Spotlight Radial Overlay */}
       {mousePosition && (
         <div
-          className="pointer-events-none absolute inset-0 -z-0 transition-opacity duration-300 opacity-100"
+          className="pointer-events-none absolute inset-0 -z-0 transition-opacity duration-500 ease-out opacity-100"
           style={{
             background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(245, 158, 11, 0.05), rgba(224, 231, 255, 0.04), transparent 80%)`,
           }}
@@ -78,10 +78,10 @@ export function BentoCard({
       {/* Top Header Row */}
       <div className="relative z-10">
         <div className="mb-4 flex items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 shadow-2xs transition-colors group-hover:border-zinc-300 group-hover:bg-white">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 shadow-2xs transition-colors duration-500 ease-out group-hover:border-zinc-300 group-hover:bg-white">
             {icon}
           </div>
-          <span className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 transition-colors group-hover:border-zinc-300 group-hover:bg-zinc-100">
+          <span className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 transition-colors duration-500 ease-out group-hover:border-zinc-300 group-hover:bg-zinc-100">
             {tag}
           </span>
         </div>
