@@ -57,7 +57,7 @@ export function WorkflowSection() {
   const downloadUrl = siteConfig.links?.googlePlay || siteConfig.playStoreUrl;
 
   return (
-    <section className="relative mx-auto mt-20 max-w-6xl px-4 py-16 sm:px-6 lg:px-8 border-t border-zinc-200/80">
+    <section id="how-it-works" className="relative mx-auto mt-20 max-w-6xl px-4 py-16 sm:px-6 lg:px-8 border-t border-zinc-200/80">
       {/* Centered Editorial Header Lockup */}
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
