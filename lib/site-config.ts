@@ -7,7 +7,9 @@ export const siteConfig = {
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.sapsjain.khuraki",
   supportEmail: "support@khuraki.com",
   privacyEmail: "privacy@khuraki.com",
-  publisher: "Khuraki Health & Fitness",
+  publisher: "Samyak Jain",
+  publisherBrand: "Khuraki",
+  grievanceOfficer: "Samyak Jain",
   foundingYear: 2026,
   links: {
     privacy: "/privacy/",
